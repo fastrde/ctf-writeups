@@ -42,9 +42,9 @@ write(-0x10, (libcbase + POP_RSP_OFFSET), 32)      # -0x10 is the location of re
 write(-0x08, (rsp + 0x40), 48)                     # New StackPointer 16-Byte aligned
 ```
 
-There was a Seccomp restrction enabled, so we only could use a few syscall and all the fancy shell opening ones were missing. But it's a CTF so we want to get the content of a file. Open and read weren't restricted and we know that the file was locatead at `/home/ctf/flag.txt` (or later chrooted to `/flag.txt`).
+There was a Seccomp restrction enabled, so we only could use a few syscalls and all the fancy shell opening ones were missing. But it's a CTF so we want to get the content of a file. Open and read weren't restricted and we know that the file was locatead at `/home/ctf/flag.txt` (or later chrooted to `/flag.txt`).
 
-The only thing left is open the file, read it and prinf the content. 
+The only thing left is open the file, read it and print the content. 
 Flag captured!
 
 ```python
